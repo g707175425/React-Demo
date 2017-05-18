@@ -14,6 +14,6 @@ Atom.propTypes = {
 
 Atom.defaultProps = {
   palette: 'grayscale',
-}
+};
 
 export default Atom

@@ -1,4 +1,6 @@
-// https://github.com/diegohaz/arc/wiki/Webpack
+/**
+ * webpack默认配置文件
+ */
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const devServer = require('@webpack-blocks/dev-server2')
@@ -20,7 +22,7 @@ const outputPath = path.join(process.cwd(), 'dist')
 const babel = () => () => ({
   module: {
     rules: [
-      { test: /\.jsx?$/, exclude: /node_modules/, loader: 'babel-loader' },
+      { test: /\.jsx?$/, exclude: /node_modules/, loader: 'babel-loader' }
     ],
   },
 })
@@ -29,6 +31,21 @@ const assets = () => () => ({
   module: {
     rules: [
       { test: /\.(png|jpe?g|svg|woff2?|ttf|eot)$/, loader: 'url-loader?limit=8000' },
+      { test: /\.css$/, loader: 'style-loader!css-loader' },
+      {
+          test: /\.less$/,
+          use: [{
+              loader: "style-loader"
+          }, {
+              loader: "css-loader", options: {
+                  sourceMap: true
+              }
+          }, {
+              loader: "less-loader", options: {
+                  sourceMap: true,
+              }
+          }]
+      }
     ],
   },
 })
@@ -39,6 +56,7 @@ const resolveModules = modules => () => ({
   },
 })
 
+//使用webpack-blocks创建webpack配置
 const config = createConfig([
   entryPoint({
     app: sourcePath,
@@ -64,7 +82,7 @@ const config = createConfig([
   ]),
   assets(),
   resolveModules(sourceDir),
-
+  //根据process.env.NODE_ENV的值判断环境
   env('development', [
     devServer({
       contentBase: 'public',

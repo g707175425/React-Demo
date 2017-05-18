@@ -30,3 +30,4 @@ if (module.hot) {
     render(renderApp(), root)
   })
 }
+

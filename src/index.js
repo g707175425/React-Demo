@@ -24,6 +24,7 @@ const renderApp = () => (
 const root = document.getElementById('app')
 render(renderApp(), root)
 
+//webpack 热加载
 if (module.hot) {
   module.hot.accept('components/App', () => {
     require('components/App')
