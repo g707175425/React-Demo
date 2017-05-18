@@ -6,7 +6,7 @@ http://bradfrost.com/blog/post/atomic-web-design/
 
 #### 技术栈
 |技术类型 |说明 |
-|------ |:--------|
+|:------ |:--------|
 |IDE|推荐使用Webstorm开发|
 |Ant-Design|ReactUI<br/>https://ant.design|
 |webpack-blocks|以函数的方式写webpack配置,方便代码复用<br/>https://github.com/andywer/webpack-blocks/tree/release/1.0|
