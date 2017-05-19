@@ -1,4 +1,3 @@
-// https://github.com/diegohaz/arc/wiki/Example-app
 import 'react-hot-loader/patch'
 import 'babel-polyfill'
 import React from 'react'

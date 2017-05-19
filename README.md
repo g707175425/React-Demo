@@ -66,6 +66,9 @@ http://bradfrost.com/blog/post/atomic-web-design/
             - 创建selectors.js,提供选择state的函数
     7. 业务逻辑
         1. 业务逻辑基本承载于container中
+    8. 组件独立开发
+        1. 在组件文件夹中创建index.stories.js文件,用于传递测试数据
+        2. 运行npm run storybook命令 打开http://localhost:9001 查看组件效果
     
 4. 运行
     1. 执行 npm start 运行开发环境
