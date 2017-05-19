@@ -51,6 +51,21 @@ http://bradfrost.com/blog/post/atomic-web-design/
         4. 默认会安装在 dependencies 中 <br/> 使用 yarn add xxx -D 安装在devDependencies 中
     2. 移除包
         1. yarn remove xxx 移除包,会自动从package.json和yarn.lock中移除依赖
+    3. 创建组件
+        1. 在components文件夹下任意atoms,molecules,organisms,pages中创建组件文件夹,组件的名字不随导出的组件名相关,而和组件所在的文件夹相关
+           - 如例子中,atoms下AntButton组件,即使export指定的组件名非AntButton,只要文件夹名字为AntButton,则组件导出后名字就是AntButton
+    4. 指定全局主题
+        1. components下themes文件夹中指定主题方案,使用的主题将会通过ThemeProvider传递到组件树中,通过styled-theme可以在任何组件中调用主题方案
+    5. 网络请求
+        1. 通过store子文件夹中的sagas.js创建网络请求,saga为异步框架,使网络请求更简洁
+    6. state操作
+        1. 在store下创建文件夹,该文件夹可以按模块命名,每个文件夹下的state的操作为独立state,互不干扰.
+        2. 创建一个动作来改变状态需要经过下面动作:
+            - 创建actions.js,存放要指定的动作,返回一个action,具体参见redux文档
+            - 创建reducer.js,修改合并state
+            - 创建selectors.js,提供选择state的函数
+    7. 业务逻辑
+        1. 业务逻辑基本承载于container中
     
 4. 运行
     1. 执行 npm start 运行开发环境
