@@ -3,7 +3,7 @@ import React from 'react'
 import {HtmlDiv, AntButton, InputButton, OrganismsTable} from 'components'
 import styled from 'styled-components'
 import { Collapse } from 'antd';
-import {IncreasableTable} from 'containers'
+import {IncreasableTable, LoadTable} from 'containers'
 const Panel = Collapse.Panel;
 /**
  * styled-components定义非基本类型Html标签css
@@ -41,6 +41,10 @@ const HomePage = () => {
                 <Panel header="Container,承载状态变化(点击增加一行)" key="5">
                     <IncreasableTable />
                 </Panel>
+                <Panel header="redux-saga网络请求" key="6">
+                    <LoadTable />
+                </Panel>
+
             </Collapse>
 
         </RootDiv>

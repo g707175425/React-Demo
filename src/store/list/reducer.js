@@ -9,7 +9,7 @@ import * as actions from './actions'
 export default (state = defaultState,action)=>{
     switch (action.type){
         case actions.ADD_ITEM:
-            return {
+            return {//ES7合并对象语法
                 ...state,
                 ...{
                     list:[...state.list,...[action.item]]
@@ -20,6 +20,29 @@ export default (state = defaultState,action)=>{
                 ...state,
                 ...{
                     list:[...state.list]
+                }
+            }
+        case actions.LOAD_LIST:
+            return {
+                ...state,
+                ...{
+                    fetching:true,
+                    list:[]
+                }
+            }
+        case actions.LOAD_LIST_FAILURE:
+            return {
+                ...state,
+                ...{
+                    fetching:false
+                }
+            }
+        case actions.LOAD_LIST_SUCCESS:
+            return {
+                ...state,
+                ...{
+                    fetching:false,
+                    list:action.list
                 }
             }
 

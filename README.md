@@ -76,7 +76,7 @@ http://bradfrost.com/blog/post/atomic-web-design/
         - themes [一些主题的配置,可以实现主题切换,通过ThemeProvider,实现]
         - App.js [app主题/路由等的配置]
         - index.js [自动导出module配置]
-    - containers [容器,处理state的传递,分发]
+    - containers [容器,处理redux-state的传递,分发]
     - services 
         - api [请求函数的封装,如公有请求头,参数,打印日志等]
         - validation [包含一些参数校验函数]

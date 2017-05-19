@@ -30,13 +30,15 @@ class OrganismsTable extends Component {
     static propTypes = {
         list: PropTypes.array,
         columns: PropTypes.array,
-        onClick: PropTypes.func
+        onClick: PropTypes.func,
+        showInput: PropTypes.bool
     }
 
     static defaultProps = {
         list: [],
         columns: columns,
-        onClick: null
+        onClick: null,
+        showInput: true
     }
 
     constructor(props) {
@@ -44,9 +46,9 @@ class OrganismsTable extends Component {
     }
 
     render = () => {
-        const {columns, list, onClick} = this.props
+        const {columns, list, onClick, showInput} = this.props
         return <div>
-            <InputButton onClick={onClick}/>
+            {showInput && <InputButton onClick={onClick}/>}
             <Table columns={columns} dataSource={list} />
         </div>
     }

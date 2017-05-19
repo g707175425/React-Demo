@@ -1,5 +1,5 @@
 /**
- * 处理redux状态传递
+ * 和redux状态相关的容器
  * Created by gongyasen on 2017/5/19.
  */
 
