@@ -4,9 +4,9 @@
  */
 import React from 'react'
 import { storiesOf } from '@kadira/storybook'
-import InputAndButton from '.'
+import InputButton from '.'
 
-storiesOf('InputAndButton',module)
+storiesOf('InputButton',module)
     .add('默认样式',()=>(
-        <InputAndButton >自定义单元格</InputAndButton>
+        <InputButton >自定义单元格</InputButton>
     ))

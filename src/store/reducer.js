@@ -12,8 +12,9 @@ const reducers = {
 const req = require.context('.', true, /\.\/.+\/reducer\.js$/)
 
 req.keys().forEach((key) => {
-  const storeName = camelCase(key.replace(/\.\/(.+)\/.+$/, '$1'))
-  reducers[storeName] = req(key).default
+    //按目录命名reducer,将state分组,并自动导出 ($1(取匹配到的第一个字符串))
+    const storeName = camelCase(key.replace(/\.\/(.+)\/.+$/, '$1'))
+    reducers[storeName] = req(key).default
 })
 
 export default combineReducers(reducers)

@@ -14,6 +14,7 @@ const {
 
 const host = process.env.HOST || 'localhost'
 const port = process.env.PORT || 3000
+//指定module根路径为src
 const sourceDir = process.env.SOURCE || 'src'
 const publicPath = `/${process.env.PUBLIC_PATH || ''}/`.replace('//', '/')
 const sourcePath = path.join(process.cwd(), sourceDir)

@@ -1,4 +1,7 @@
-// https://github.com/diegohaz/arc/wiki/Storybook
+/**
+ * storybook 配置文件
+ * https://github.com/diegohaz/arc/wiki/Storybook
+ */
 import React from 'react'
 import { configure, addDecorator } from '@kadira/storybook'
 import { Provider } from 'react-redux'
@@ -10,6 +13,9 @@ import theme from 'components/themes/default'
 
 const store = configureStore({}, { api: api.create() })
 const req = require.context('components', true, /.stories.js$/)
+
+//手动引入components所有组件
+require('components')
 
 function loadStories() {
   req.keys().forEach(filename => req(filename))

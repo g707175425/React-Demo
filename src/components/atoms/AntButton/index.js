@@ -15,11 +15,13 @@ const StyledButton = styled(Button)`
 //React创建组件方式
 class AntButton extends Component {
     static propTypes = {
-        type:PropTypes.string
+        type: PropTypes.string,
+        onClick: PropTypes.func
     } //这里定义props类型
 
     static defaultProps = {
-        type:"primary"
+        type: "primary",
+        onClick: null
     } //这里定义默认props值
 
     constructor(props) {
@@ -28,8 +30,9 @@ class AntButton extends Component {
 
     //渲染DOM
     render = () => {
+        const {onClick} = this.props
         //此处演示了从props中取值:this.props.type,得到当前组件的子组件:this.props.children
-        return <StyledButton type={this.props.type}>{this.props.children}</StyledButton>
+        return <StyledButton type={this.props.type} onClick={onClick}>{this.props.children}</StyledButton>
     }
 
 }

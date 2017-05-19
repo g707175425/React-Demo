@@ -26,6 +26,8 @@ http://bradfrost.com/blog/post/atomic-web-design/
 |cross-env|解决windows下NODE_ENV无法使用问题<br/>https://npm.taobao.org/package/cross-env<br/>https://segmentfault.com/a/1190000005811347?_ea=934705|
 |validator|字符串校验工具<br/>https://www.npmjs.com/package/validator|
 |whatwg-fetch|fetch网络请求框架<br/>https://www.npmjs.com/package/whatwg-fetch|
+|lodash|js工具库<br/>https://lodash.com/|
+|react-update|使用react源生update库合并state<br/>http://reactjs.cn/react/docs/update.html|
 
 
 #### 工作流
