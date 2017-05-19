@@ -10,7 +10,7 @@
     "dev": "npm run env:dev -- webpack-dev-server",
     "build:copy": "copyfiles -u 1 public/* public/**/* dist",
     "prebuild": "npm run build:clean && npm run build:copy",
-    "build": "npm run env:prod -- webpack",
+    "build": "npm run env:prod -- webpack"
   },
   "devDependencies": {
     "@kadira/storybook": "^2.35.2",
