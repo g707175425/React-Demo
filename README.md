@@ -13,7 +13,7 @@ http://bradfrost.com/blog/post/atomic-web-design/
 |React|https://facebook.github.io/react/docs/hello-world.html|
 |Redux|http://redux.js.org/ <br/> http://cn.redux.js.org/|
 |Redux-Saga|和redux结合的一种异步框架<br/>https://github.com/redux-saga/redux-saga<br/>教程<br/>https://segmentfault.com/a/1190000007261052?_ea=1290634<br/>|
-|Redux-Saga-Trunk|redux-thunk的saga实现<br/>https://github.com/diegohaz/redux-saga-thunk|
+|Redux-Saga-Thunk|redux-thunk的saga实现<br/>https://github.com/diegohaz/redux-saga-thunk|
 |Storybook|和react结合良好的组件开发工具<br/>https://storybooks.js.org/docs/react-storybook/basics/quick-start-guide/|
 |Babel|es6语法支持<br/>http://babeljs.cn/|
 |Styled-Components|js结合css最佳方案<br/>https://styled-components.com/|
